@@ -1,0 +1,16 @@
+<h2>Posts</h2>
+<div class="d-flex flex-wrap justify-content-between ">
+    <div *ngFor="let p of renderedPosts"
+         class="card"
+          id="{{p.id}}" 
+          style="width: 30%; margin-bottom:20px" >
+        <div class="card-body">
+            <h3>{{p.title}}</h3>
+            <!-- <app-commentlist [id]="p.id"></app-commentlist>
+            <app-commentcreate [id]="p.id"></app-commentcreate> -->
+            <app-commentlist [comments]="p.comments"></app-commentlist>
+            <app-commentcreate [id]="p.id"></app-commentcreate>
+        </div>
+    </div>
+
+</div>
